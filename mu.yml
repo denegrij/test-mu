@@ -1,0 +1,14 @@
+namespace: mu-00
+environments:
+- name: acceptance
+- name: production
+service:
+  name: extension
+  port: 80
+  healthEndpoint: /
+  pathPatterns:
+  - /*
+  pipeline:
+    source:
+      provider: GitHub
+      repo: denegrij/test-mu
